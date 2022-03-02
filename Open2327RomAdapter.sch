@@ -5,8 +5,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "Open2327RomAdapter: C64 ROM 24 -> EPROM 28 Pin Adapter"
-Date "2020-04-16"
-Rev "3"
+Date "2022-03-03"
+Rev "3.1"
 Comp "SukkoPera"
 Comment1 "https://ist.uwaterloo.ca/~~schepers/sockets.html"
 Comment2 "https://ist.uwaterloo.ca/~~schepers/roms.html"
@@ -222,8 +222,6 @@ Wire Wire Line
 Wire Wire Line
 	6300 3500 6300 4700
 Wire Wire Line
-	4750 2850 4750 3050
-Wire Wire Line
 	4750 2850 5270 2850
 Wire Wire Line
 	4850 5500 4950 5500
@@ -236,10 +234,6 @@ Wire Wire Line
 Wire Wire Line
 	3550 2600 3550 2650
 Wire Wire Line
-	4250 2450 4400 2450
-Wire Wire Line
-	4250 2550 4500 2550
-Wire Wire Line
 	3950 2450 3850 2450
 Wire Wire Line
 	3850 2450 3850 2550
@@ -250,40 +244,9 @@ Wire Wire Line
 	3850 2550 3950 2550
 Connection ~ 3850 2550
 Wire Wire Line
-	4200 3100 4200 2750
-Wire Wire Line
-	4200 2750 4400 2750
-Wire Wire Line
-	4300 3100 4300 2850
-Wire Wire Line
-	4300 2850 4500 2850
-Connection ~ 4500 2550
-Wire Wire Line
-	4400 3100 4400 2950
-Wire Wire Line
-	4400 2950 4600 2950
-Wire Wire Line
-	4500 3100 4500 3050
-Wire Wire Line
-	4500 3050 4750 3050
-Connection ~ 4750 3050
-Wire Wire Line
-	4500 2850 4500 2550
-Wire Wire Line
-	4400 2750 4400 2450
-Connection ~ 4400 2450
-Wire Wire Line
-	4600 2950 4600 2650
-Wire Wire Line
 	3850 2650 3950 2650
 Wire Wire Line
 	3850 2550 3850 2650
-Wire Wire Line
-	4500 2550 4900 2550
-Wire Wire Line
-	4750 3050 4750 3250
-Wire Wire Line
-	4400 2450 5270 2450
 $Comp
 L Memory_EPROM:27128 U2
 U 1 1 5CCF3A08
@@ -303,29 +266,13 @@ Wire Wire Line
 	4750 2650 4750 2750
 Wire Wire Line
 	4750 2750 5270 2750
-Wire Wire Line
-	4250 2650 4600 2650
-Connection ~ 4600 2650
-Wire Wire Line
-	4600 2650 4750 2650
-$Comp
-L Connector_Generic:Conn_01x04 P1
-U 1 1 5CD12EA7
-P 4400 3300
-F 0 "P1" V 4505 3195 50  0000 L CNN
-F 1 "Conn_01x04" V 4364 3480 50  0001 L CNN
-F 2 "Open2327RomAdapter:Solderable_PinHeader_1x04" H 4400 3300 50  0001 C CNN
-F 3 "~" H 4400 3300 50  0001 C CNN
-	1    4400 3300
-	0    1    1    0   
-$EndComp
 $Comp
 L Device:R R1
 U 1 1 5CD17250
 P 4100 2450
 F 0 "R1" V 4055 2610 50  0000 C CNN
 F 1 "10k" V 4100 2450 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 4030 2450 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 4030 2450 50  0001 C CNN
 F 3 "~" H 4100 2450 50  0001 C CNN
 	1    4100 2450
 	0    1    1    0   
@@ -336,7 +283,7 @@ U 1 1 5CD1B543
 P 4100 2550
 F 0 "R2" V 4055 2710 50  0000 C CNN
 F 1 "10k" V 4100 2550 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 4030 2550 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 4030 2550 50  0001 C CNN
 F 3 "~" H 4100 2550 50  0001 C CNN
 	1    4100 2550
 	0    1    1    0   
@@ -347,7 +294,7 @@ U 1 1 5CD1B59E
 P 4100 2650
 F 0 "R3" V 4055 2810 50  0000 C CNN
 F 1 "10k" V 4100 2650 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 4030 2650 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 4030 2650 50  0001 C CNN
 F 3 "~" H 4100 2650 50  0001 C CNN
 	1    4100 2650
 	0    1    1    0   
@@ -403,7 +350,7 @@ F 3 "~" H 10885 6855 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conn:CONN_1 P99
+L Open2327RomAdapter-rescue:CONN_1-conn P99
 U 1 1 5CDA5A91
 P 10890 6395
 F 0 "P99" V 10824 6454 40  0000 L CNN
@@ -417,11 +364,11 @@ NoConn ~ 10890 6245
 Wire Wire Line
 	3350 3440 3350 3500
 $Comp
-L Jumper:Jumper_2_Bridged JP1
+L Jumper:Jumper_2_Bridged JP5
 U 1 1 5E98DDF8
 P 3350 3240
-F 0 "JP1" V 3304 3298 50  0000 L CNN
-F 1 "JUMPER_4K_SW" V 3395 3298 50  0000 L CNN
+F 0 "JP5" V 3360 3290 50  0000 L CNN
+F 1 "JUMPER_4K_SW" V 3360 2640 50  0000 L CNN
 F 2 "Jumper:SolderJumper-2_P1.3mm_Bridged_RoundedPad1.0x1.5mm" H 3350 3240 50  0001 C CNN
 F 3 "~" H 3350 3240 50  0001 C CNN
 	1    3350 3240
@@ -431,8 +378,8 @@ $Comp
 L Connector:Conn_01x01_Male J1
 U 1 1 5E9A2BF5
 P 3550 2995
-F 0 "J1" H 3522 2927 50  0000 R CNN
-F 1 "CONN_A12" H 3522 3018 50  0000 R CNN
+F 0 "J1" H 3650 3050 50  0000 R CNN
+F 1 "CONN_A12" H 4150 3050 50  0000 R CNN
 F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 3550 2995 50  0001 C CNN
 F 3 "~" H 3550 2995 50  0001 C CNN
 	1    3550 2995
@@ -444,7 +391,7 @@ U 1 1 5E9B71C8
 P 3615 2785
 F 0 "R4" V 3570 2945 50  0000 C CNN
 F 1 "10k" V 3615 2785 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 3545 2785 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 3545 2785 50  0001 C CNN
 F 3 "~" H 3615 2785 50  0001 C CNN
 	1    3615 2785
 	0    -1   -1   0   
@@ -455,7 +402,7 @@ Wire Wire Line
 	3465 2785 3350 2785
 Connection ~ 3350 2785
 Wire Wire Line
-	3350 2785 3350 2995
+	3350 2785 3350 2900
 Wire Wire Line
 	3765 2785 3850 2785
 Wire Wire Line
@@ -463,4 +410,104 @@ Wire Wire Line
 Connection ~ 3350 2995
 Wire Wire Line
 	3350 2995 3350 3040
+$Comp
+L Jumper:Jumper_2_Bridged JP2
+U 1 1 62282529
+P 4250 3100
+F 0 "JP2" V 4500 3100 50  0000 C CNN
+F 1 "J_A14" H 4150 3200 50  0000 L CNN
+F 2 "TestPoint:TestPoint_2Pads_Pitch2.54mm_Drill0.8mm" H 4250 3100 50  0001 C CNN
+F 3 "~" H 4250 3100 50  0001 C CNN
+	1    4250 3100
+	0    1    1    0   
+$EndComp
+$Comp
+L Jumper:Jumper_2_Bridged JP1
+U 1 1 62286137
+P 4450 3100
+F 0 "JP1" V 4700 3100 50  0000 C CNN
+F 1 "J_A13" H 4350 3200 50  0000 L CNN
+F 2 "TestPoint:TestPoint_2Pads_Pitch2.54mm_Drill0.8mm" H 4450 3100 50  0001 C CNN
+F 3 "~" H 4450 3100 50  0001 C CNN
+	1    4450 3100
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4750 2850 4750 3150
+Wire Wire Line
+	4250 3300 4450 3300
+Wire Wire Line
+	4450 3300 4600 3300
+Wire Wire Line
+	4600 3300 4600 3150
+Wire Wire Line
+	4600 3150 4750 3150
+Connection ~ 4450 3300
+Connection ~ 4750 3150
+Wire Wire Line
+	4750 3150 4750 3250
+Wire Wire Line
+	4250 2900 4250 2800
+Wire Wire Line
+	4250 2650 4350 2650
+Wire Wire Line
+	4450 2900 4550 2900
+Wire Wire Line
+	4250 2550 4450 2550
+Wire Wire Line
+	4450 2800 4450 2550
+Wire Wire Line
+	4250 2800 4450 2800
+Connection ~ 4450 2550
+Wire Wire Line
+	4450 2550 4900 2550
+Wire Wire Line
+	4350 2750 4350 2650
+Wire Wire Line
+	4050 2750 4350 2750
+Connection ~ 4350 2650
+Wire Wire Line
+	4350 2650 4750 2650
+Wire Wire Line
+	4250 2450 4550 2450
+Wire Wire Line
+	4550 2900 4550 2450
+Connection ~ 4550 2450
+Wire Wire Line
+	4550 2450 5270 2450
+Connection ~ 4250 3300
+Wire Wire Line
+	4050 3300 4250 3300
+Wire Wire Line
+	4050 2900 4050 2750
+$Comp
+L Jumper:Jumper_2_Open JP4
+U 1 1 6234A031
+P 3850 3100
+F 0 "JP4" V 4100 3100 50  0000 C CNN
+F 1 "J_A12" H 3750 3200 50  0000 L CNN
+F 2 "TestPoint:TestPoint_2Pads_Pitch2.54mm_Drill0.8mm" H 3850 3100 50  0001 C CNN
+F 3 "~" H 3850 3100 50  0001 C CNN
+	1    3850 3100
+	0    1    1    0   
+$EndComp
+$Comp
+L Jumper:Jumper_2_Bridged JP3
+U 1 1 62278407
+P 4050 3100
+F 0 "JP3" V 4300 3100 50  0000 C CNN
+F 1 "J_A15" H 3950 3200 50  0000 L CNN
+F 2 "TestPoint:TestPoint_2Pads_Pitch2.54mm_Drill0.8mm" H 4050 3100 50  0001 C CNN
+F 3 "~" H 4050 3100 50  0001 C CNN
+	1    4050 3100
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4050 3300 3850 3300
+Connection ~ 4050 3300
+Wire Wire Line
+	3850 2900 3350 2900
+Connection ~ 3350 2900
+Wire Wire Line
+	3350 2900 3350 2995
 $EndSCHEMATC

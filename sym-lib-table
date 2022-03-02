@@ -1,3 +1,4 @@
 (sym_lib_table
   (lib (name 2364)(type Legacy)(uri ${KIPRJMOD}/lib/2364.lib)(options "")(descr ""))
+  (lib (name Open2327RomAdapter-rescue)(type Legacy)(uri ${KIPRJMOD}/Open2327RomAdapter-rescue.lib)(options "")(descr ""))
 )
